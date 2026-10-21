@@ -70,6 +70,31 @@ Monitor: `../../tools/mtu_monitor.sh`, every 15 min until 03:00 UTC 10-22, to `l
   Not yet known whether that is normal with no motes on the bench, or a separate fault that keeps readings from arriving.
 - The real test is still the 21:00 to 02:00 UTC busy period (100+ errors/hr on 10-19).
 
+**Status at 20:40 UTC (6 h 20 m in):** still clean. Counted per ACS poll (a poll fails if any `Sock Recv ERROR` or `Failed SSL connect` follows it before the next poll), today's log:
+
+| Window (10-21 UTC) | ppp0 MTU | Polls | Failed polls |
+|---|---|---:|---:|
+| 00:00 to 14:17 | 1500 | 61 | 28 (46%) |
+| 14:17 to 20:40 | 1400 | 26 | 0 |
+
+At the before-change failure rate, 26 clean polls in a row would be very unlikely. Failures do cluster by time of day, though (04:00 to 10:00 UTC was quiet even at 1500), so the evening still has to be checked.
+**Best like-for-like baseline:** 10-21 00:00 to 01:00 UTC (20:00 to 21:00 EDT on 10-20) had MTU 1500 (the 20:05 UTC reboot reverted the change), no motes and 6 polls, and logged **43** `Sock Recv ERROR`. Compare tonight's 00:00 UTC hour against it.
+
+### Why no readings today, and why the 10-19 numbers are not comparable hour for hour
+
+- **No motes are joined today.** `comm_SendDustCmdTask` (`comm.c:5498`) resets the SmartMesh manager when `g_numMotesConnected` has been 0 for 360 s.
+  That is the ~6-minute `Smartmesh API - Reset()` cycle. It is a symptom of no motes, not a fault.
+  On 10-19/10-20 motes were present (a Pressure Mote, MAC `00:17:0D:00:00:70:D9:E6`; 21 + 85 `Reading PUSHED TO ACS!`) and the manager hardly reset (2 resets).
+  So the bench pressure mote is off, out of range, or joined elsewhere. Restore it to retest the reading-upload path.
+  (Commit `fbfe08b` notes the same no-mote reset cycle from 2022 testing.)
+- **The failing transaction was the ACS message poll, not reading uploads.** On 10-19, 663 of 666 `Sock Recv ERROR` followed `Getting messages from ACS`; 3 followed a reading push.
+  So today's polls exercise the same path that failed.
+- **Poll rate differs by app version.** On 10-19 (V1.01.03) the app polled 59 to 75 times/hr (about every 55 s); today (V1.01.07) it polls 4/hr.
+  Commit `27af76d` (2022-10-04, "Slowed getting messages from ACS") defined `SMS_2_GET_MESSAGE`, which fixes the poll period at `g_getMessagesDefaultPeriod` = 900 s.
+  Before that, the app polled every 30 s for an hour after startup or after any ACS message (`comm.c:5524-5537`).
+  On V1.01.03 that made a loop: failures → `Too many failed sockets 11` → app restart → 30 s polling for an hour → more failures → restart.
+  This explains the 8 to 15 minute reset cycle and why 10-19 had about 100 errors/hr. V1.01.07 polls less, so it fails and resets less often, but the underlying failure (46% of polls at MTU 1500) is the same.
+
 ## Symptom
 
 Concentrator app V 1.01.03 (`/usr/bin/Concentrator`) logs repeated:
