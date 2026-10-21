@@ -48,6 +48,18 @@ New in this log: one `Address Not Found!` at 14:34, a likely DNS lookup failure.
 **Change applied:** `18:17:18 UTC  ip link set ppp0 mtu 1400`, NOT persistent (it reverts when ppp0 reconnects or the gateway reboots).
 To compare, count from 18:17:18 UTC onward in `/var/log/concentrator.log`.
 
+### MTU 1400 retest (2026-10-21)
+
+Unit 086B back on the bench, serial only. Before the change (14:16 UTC):
+- App V 1.01.07, up 18 h 11 m. ppp0 `10.100.58.124`, MTU 1500.
+- **Same SIM** (IMSI `310410268702058`), LTE Cat-M1, LAC `1547`, Cell `13321745`, Strength 100.
+- Path MTU unchanged: 1444-byte packets get replies, 1448 bytes and above get none, on both ACS IPs.
+- `concentrator.log` (UTC, from 00:00) per hour, Sock Recv ERROR / resets: 08 0/0, 09 0/0, 10 1/0, 11 6/1, 12 19/3, 13 3/0, 14 (to 14:16) 3/1.
+- `PUSHED` does not appear anywhere in today's log (0 lines), so push counts can't be compared yet. Check why before judging the result.
+
+**Change applied:** `14:17:39 UTC  ip link set ppp0 mtu 1400`, NOT persistent. 1400-byte pings to both ACS IPs succeed.
+Count from 14:17:39 UTC onward. The evening busy period is 21:00 to 02:00 UTC.
+
 ## Symptom
 
 Concentrator app V 1.01.03 (`/usr/bin/Concentrator`) logs repeated:
