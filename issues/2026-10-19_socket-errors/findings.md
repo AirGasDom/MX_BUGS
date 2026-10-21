@@ -59,6 +59,16 @@ Unit 086B back on the bench, serial only. Before the change (14:16 UTC):
 
 **Change applied:** `14:17:39 UTC  ip link set ppp0 mtu 1400`, NOT persistent. 1400-byte pings to both ACS IPs succeed.
 Count from 14:17:39 UTC onward. The evening busy period is 21:00 to 02:00 UTC.
+Monitor: `../../tools/mtu_monitor.sh`, every 15 min until 03:00 UTC 10-22, to `logs/mtu1400-monitor-20261021.csv`.
+
+**Status at 17:00 UTC (2 h 40 m in), encouraging but not conclusive:**
+- 11 checks, all clean: MTU still 1400, same ppp0 IP, no reboot.
+- Since the change: 0 `Sock Recv ERROR`, 0 resets, 0 SSL fails. Before it, 12:00 to 14:17 UTC had 25 errors and 4 resets.
+- The traffic is the ACS message poll (`Getting messages from ACS` → `No (more) messages from ACS`), every 15 min, done in 2 to 5 s. About 11 clean polls in a row.
+- **No readings are sent at all:** 0 `Reading PUSHED TO ACS!` and 0 `NOT PUSHED` all day, so the larger upload path is untested.
+- The SmartMesh manager link resets and reconnects about every 5 min (27 `Smartmesh API - Reset()` since 14:17).
+  Not yet known whether that is normal with no motes on the bench, or a separate fault that keeps readings from arriving.
+- The real test is still the 21:00 to 02:00 UTC busy period (100+ errors/hr on 10-19).
 
 ## Symptom
 
