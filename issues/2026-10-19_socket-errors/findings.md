@@ -94,6 +94,79 @@ Before it: no errors or resets for 20 h 49 m at MTU 1400 (14:17:39 UTC 10-21 to 
 Monitor: `logs/mtu1500-control-20261022.csv`, every 15 min until 03:00 UTC 10-23; it stops if the MTU leaves 1500 or the gateway reboots.
 Expectation if MTU is the cause: about 46% of polls fail, as on 10-21 before the change, plus type 9/10 resets.
 
+**Path MTU ping test at MTU 1500 (about 11:45 UTC 10-22, from the gateway console):** the limit is unchanged.
+`-s` is the ICMP payload; packet size on the wire = payload + 8 (ICMP) + 20 (IP). BusyBox prints reply size without the IP header (1424 = 1444 − 20).
+
+| Command | Packet | 204.16.110.235 | 72.249.131.173 |
+|---|---:|---|---|
+| `ping -c 3 -W 3 -s 1416 -I ppp0 <ip>` | 1444 | 3/3, 657 / 860 / 1244 ms | 3/3, 420 / 561 / 660 ms |
+| `ping -c 3 -W 3 -s 1420 -I ppp0 <ip>` | 1448 | 0/3, 100% loss | 0/3, 100% loss |
+
+```
+### ping -c 3 -W 3 -s 1416 -I ppp0 204.16.110.235
+PING 204.16.110.235 (204.16.110.235): 1416 data bytes
+1424 bytes from 204.16.110.235: seq=0 ttl=236 time=1244.473 ms
+1424 bytes from 204.16.110.235: seq=1 ttl=236 time=679.228 ms
+1424 bytes from 204.16.110.235: seq=2 ttl=236 time=656.886 ms
+--- 204.16.110.235 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 656.886/860.195/1244.473 ms
+
+### ping -c 3 -W 3 -s 1420 -I ppp0 204.16.110.235
+PING 204.16.110.235 (204.16.110.235): 1420 data bytes
+--- 204.16.110.235 ping statistics ---
+3 packets transmitted, 0 packets received, 100% packet loss
+
+### ping -c 3 -W 3 -s 1416 -I ppp0 72.249.131.173
+PING 72.249.131.173 (72.249.131.173): 1416 data bytes
+1424 bytes from 72.249.131.173: seq=0 ttl=239 time=660.357 ms
+1424 bytes from 72.249.131.173: seq=1 ttl=239 time=419.840 ms
+1424 bytes from 72.249.131.173: seq=2 ttl=239 time=602.535 ms
+--- 72.249.131.173 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 419.840/560.910/660.357 ms
+
+### ping -c 3 -W 3 -s 1420 -I ppp0 72.249.131.173
+PING 72.249.131.173 (72.249.131.173): 1420 data bytes
+--- 72.249.131.173 ping statistics ---
+3 packets transmitted, 0 packets received, 100% packet loss
+```
+
+ppp0 was at MTU 1500, so the 1448-byte packets left the gateway whole and were lost on the path, with no ICMP error returned.
+
+### Second unit: E335 vs 086B at MTU 1500 (2026-10-22, 11:06 to 15:05 UTC)
+
+E335 (`CellConcentrator-0010ec01e335`, gateway MAC `00:10:EC:01:E3:35`) is a second MaxGateway on the bench with its own SIM.
+It shows the same 1444-byte path limit as 086B (pings above 1444 bytes get no reply), so the limit is not specific to 086B or its SIM.
+Both units are on ppp0 MTU 1500. Counts are from each unit's `/var/log/concentrator.log*`, using the same awk as `tools/mtu_monitor.sh`, from `1022110624`.
+
+| | E335 | 086B |
+|---|---:|---:|
+| ppp0 MTU | 1500 | 1500 |
+| `Sock Recv ERROR` | **166** | 39 |
+| App resets | 5 (all Type 10) | 5 (1 × Type 10, 4 × Type 9) |
+| `Reading PUSHED TO ACS` | 15 (0 `NOT PUSHED`) | 0 (no motes) |
+| `Failed SSL connect` | 5 | 1 |
+| Uptime at 15:05 UTC | 3 h 25 m (rebooted about 11:39 UTC, likely when cabled up) | 42 h |
+
+Errors / resets / readings pushed per hour (UTC):
+
+| Hour | E335 | 086B |
+|---|---|---|
+| 11 | 17 / 0 / 2 | 2 / 0 / 0 |
+| 12 | 40 / 0 / 10 | 9 / 1 / 0 |
+| 13 | 52 / 2 / 2 | 11 / 2 / 0 |
+| 14 | 53 / 3 / 1 | 17 / 2 / 0 |
+
+- **The fault reproduces on a second unit and SIM.** E335's resets are all Type 10 (`Too many failed sockets`), the same signature as 086B on 10-19/10-20.
+- **E335 has about 4× the errors because it has a mote** (powerup POST for `00:17:0D:00:00:68:49:22`), so it talks to ACS more. It also started 33 min into the window, so its rate is higher than the totals suggest.
+- **Readings still get through.** All 15 E335 readings were accepted while it logged 166 errors and 5 resets.
+  This is a likely reason for few field complaints: uploads succeed, and mainly the ACS → gateway message poll fails, which is not visible at the ACS end as missing data.
+- **086B's resets are mostly Type 9.** With no motes it only polls every 900 s; when those polls fail it never gets an ACS ACK, so the inactivity timer (`Concentrator.c:1198-1211`) resets it before 11 socket errors pile up.
+- The app version could not be read from either log in this window.
+
+Next: set E335 to MTU 1400 while 086B stays at 1500 (concurrent A/B on two units), and ask the ACS team for fleet-wide poll failure / reset stats.
+
 ### Why no readings today, and why the 10-19 numbers are not comparable hour for hour
 
 - **No motes are joined today.** `comm_SendDustCmdTask` (`comm.c:5498`) resets the SmartMesh manager when `g_numMotesConnected` has been 0 for 360 s.

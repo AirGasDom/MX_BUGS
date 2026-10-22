@@ -3,10 +3,11 @@
 
 Usage: gw.py '<command>' [timeout_seconds]
 Password is read from the GW_PASS env var, used only if a login prompt appears.
+Port defaults to /dev/ttyUSB0; set GW_PORT to use another adapter.
 """
 import os, re, sys, time, serial
 
-PORT, BAUD = "/dev/ttyUSB0", 115200
+PORT, BAUD = os.environ.get("GW_PORT", "/dev/ttyUSB0"), 115200
 PROMPT = re.compile(rb"root@[^\s:]+:[^#]*# ?$")
 MARK = "__GW_DONE__"
 
