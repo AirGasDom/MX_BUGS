@@ -80,6 +80,10 @@ Monitor: `../../tools/mtu_monitor.sh`, every 15 min until 03:00 UTC 10-22, to `l
 At the before-change failure rate, 26 clean polls in a row would be very unlikely. Failures do cluster by time of day, though (04:00 to 10:00 UTC was quiet even at 1500), so the evening still has to be checked.
 **Best like-for-like baseline:** 10-21 00:00 to 01:00 UTC (20:00 to 21:00 EDT on 10-20) had MTU 1500 (the 20:05 UTC reboot reverted the change), no motes and 6 polls, and logged **43** `Sock Recv ERROR`. Compare tonight's 00:00 UTC hour against it.
 
+**Final result (monitor ended 2026-10-22 03:03 UTC, 12 h 45 m at MTU 1400):** 0 `Sock Recv ERROR`, 0 resets, 0 SSL fails.
+MTU stayed 1400 and ppp0 IP `10.100.58.124` was unchanged, with no reboot. This covers the full evening busy period, 21:00 to 02:00 UTC, including the 00:00 UTC hour (43 errors at MTU 1500 the night before).
+The fix holds for the ACS poll path. The reading-upload path is still untested (no motes joined). Next: restore the bench mote, then make the MTU or MSS change persistent (Next steps, step 2).
+
 ### Why no readings today, and why the 10-19 numbers are not comparable hour for hour
 
 - **No motes are joined today.** `comm_SendDustCmdTask` (`comm.c:5498`) resets the SmartMesh manager when `g_numMotesConnected` has been 0 for 360 s.
