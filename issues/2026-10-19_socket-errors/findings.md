@@ -84,6 +84,16 @@ At the before-change failure rate, 26 clean polls in a row would be very unlikel
 MTU stayed 1400 and ppp0 IP `10.100.58.124` was unchanged, with no reboot. This covers the full evening busy period, 21:00 to 02:00 UTC, including the 00:00 UTC hour (43 errors at MTU 1500 the night before).
 The fix holds for the ACS poll path. The reading-upload path is still untested (no motes joined). Next: restore the bench mote, then make the MTU or MSS change persistent (Next steps, step 2).
 
+### MTU 1500 control run (2026-10-22)
+
+Purpose: confirm the MTU is the cause before any fleet-wide fix. If the errors come back at 1500 and stop again at 1400, the link is causal on this unit.
+Still open: whether the 1444-byte limit is specific to this SIM, APN or cell, and why there are few field complaints (see the scope questions below).
+
+**Change applied:** `11:06:24 UTC  ip link set ppp0 mtu 1500`. Gateway up 1 d 15 h, same SIM, ppp0 `10.100.58.124`, still no motes.
+Before it: no errors or resets for 20 h 49 m at MTU 1400 (14:17:39 UTC 10-21 to 11:06 UTC 10-22).
+Monitor: `logs/mtu1500-control-20261022.csv`, every 15 min until 03:00 UTC 10-23; it stops if the MTU leaves 1500 or the gateway reboots.
+Expectation if MTU is the cause: about 46% of polls fail, as on 10-21 before the change, plus type 9/10 resets.
+
 ### Why no readings today, and why the 10-19 numbers are not comparable hour for hour
 
 - **No motes are joined today.** `comm_SendDustCmdTask` (`comm.c:5498`) resets the SmartMesh manager when `g_numMotesConnected` has been 0 for 360 s.

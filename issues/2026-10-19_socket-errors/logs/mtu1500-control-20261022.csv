@@ -1,0 +1,2 @@
+check_utc,window_start_utc,ppp0_mtu,ppp0_ip,uptime_s,sock_recv_err,resets,pushed,not_pushed,ssl_fail
+2026-10-22T11:06:30Z,1022110624,1500,10.100.58.124,140529,0,0,0,0,0
