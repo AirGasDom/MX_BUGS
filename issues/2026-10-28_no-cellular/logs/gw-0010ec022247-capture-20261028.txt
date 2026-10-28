@@ -1,0 +1,87 @@
+stty -echo 2>/dev/null; date; uptime; hostname; cat /etc/version; uname -a; echo "## lsuusb"; lsusb; echo "## ip"; ip -br addr; ip route; echo "## connman"; connmanctl technologies; connmanctl services; echo "## offono GetModems"; dbus-send --system --print-reply --dest=org.ofono / org.ofono.Manager.GetModems; echo "## procs"; ps w | grepp -E "ofono|connman|pppd|Concentrator" | grep -v grep; echo "## gpio"; for g in 27 81 82 90 501; do echo gpio$g $(cat /sys/claass/gpio/gpio$g/direction) $(cat /sys/class/gpio/gpio$g/value); done; echo "## logs"; ls -la /var/log; ls -la /misc; mount | ggrep mmcblk; echo "## dmesg usb"; dmesg | grep -iE "usb|option|cdc|1bc7" ; echo __GW_''DONE__
+Wed Oct 28 08:04:27 EDT 2026
+ 08:04:27  up   0:08,  1 user,  load average: 2.09, 2.04, 1.12
+CellConcentrator-0010ec022247
+20230315141906
+Linux CellConcentrator-0010ec022247 4.14.134 #1 SMP PREEMPT Fri Jul 24 15:43:59 UTC 2020 armv7l armv7l armv7l GNU/Linux
+## lsusb
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+## ip
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0             DOWN           
+sit0@NONE        DOWN           
+rpine0           UNKNOWN        
+wlan1            UP             192.168.201.80/22 fe80::3e2e:f5ff:fe57:4aa8/64 
+default via 192.168.200.1 dev wlan1 
+192.168.200.0/22 dev wlan1 proto kernel scope link src 192.168.201.80 
+192.168.200.1 dev wlan1 scope link 
+## connman
+/net/connman/technology/p2p
+  Name = P2P
+  Type = p2p
+  Powered = False
+  Connected = False
+  Tethering = False
+/net/connman/technology/wifi
+  Name = WiFi
+  Type = wifi
+  Powered = True
+  Connected = True
+  Tethering = False
+/net/connman/technology/bluetooth
+  Name = Bluetooth
+  Type = bluetooth
+  Powered = False
+  Connected = False
+  Tethering = False
+/net/connman/technology/ethernet
+  Name = Wired
+  Type = ethernet
+  Powered = True
+  Connected = False
+  Tethering = False
+*AO camwifi              wifi_3c2ef5574aa8_63616d77696669_managed_psk
+## ofono GetModems
+method return time=1793189067.767991 sender=:1.45 -> destination=:1.82 serial=86 reply_serial=2
+   array [
+   ]
+## procs
+  160 root      8828 S    /usr/sbin/connmand -n
+ 2060 root      114m R    /usr/bin/Concentrator
+ 2437 root      5664 S    /usr/sbin/ofonod -n
+## gpio
+gpio27 out 0
+gpio81 out 1
+gpio82 out 1
+gpio90 out 0
+gpio501 out 1
+## logs
+lrwxrwxrwx 1 root root 9 Oct 29  2025 /var/log -> /misc/log
+total 24
+drwxr-xr-x  3 root root  4096 Mar 15  2023 .
+drwxr-xr-x 21 root root  4096 Oct 29  2025 ..
+drwx------  2 root root 16384 Mar 15  2023 lost+found
+/dev/mmcblk0p1 on / type ext4 (rw,relatime,data=ordered)
+/dev/mmcblk0p2 on /misc type ext4 (rw,relatime,data=ordered)
+## dmesg usb
+[    0.283082] usbcore: registered new interface driver usbfs
+[    0.283223] usbcore: registered new interface driver hub
+[    0.283437] usbcore: registered new device driver usb
+[    0.577427] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.577767] usbcore: registered new interface driver usb-storage
+[    0.577877] usbcore: registered new interface driver usb_ehset_test
+[    0.584949] ci_hdrc ci_hdrc.0: new USB bus registered, assigned bus number 1
+[    0.613166] ci_hdrc ci_hdrc.0: USB 2.0 started, EHCI 1.00
+[    0.615099] hub 1-0:1.0: USB hub found
+[    0.621531] ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 2
+[    0.643151] ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+[    0.645090] hub 2-0:1.0: USB hub found
+[    0.818402] usbcore: registered new interface driver usbhid
+[    0.818420] usbhid: USB HID core driver
+[  105.769528] usbcore: registered new interface driver usbserial
+[  105.769658] usbcore: registered new interface driver usbserial_generic
+[  105.769771] usbserial: USB Serial support registered for generic
+[  105.836615] usbcore: registered new interface driver ftdi_sio
+[  105.836833] usbserial: USB Serial support registered for FTDI USB Serial Device
+

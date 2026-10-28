@@ -1,0 +1,320 @@
+sync; reboot
+root@CellConcentrator-0010ec022247:~# [[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mBluetooth[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mTimers[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily Cleanup of Temporary Directories[0m.
+         Stopping [0;1;39mBluetooth service[0m...
+[[0;32m  OK  [0m] Stopped target [0;1;39mMulti-User System[0m.
+         Stopping [0;1;39mLogin Service[0m...
+         Stopping [0;1;39mPeriodic Command Scheduler[0m...
+         Stopping [0;1;39mKernel Logging Service[0m...
+[[0;32m  OK  [0m] Stopped target [0;1;39mContainers[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLogin Prompts[0m.
+         Stopping [0;1;39mGetty on tty1[0m...
+         Stopping [0;1;39msms service to receive the sms messages[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily rotation of log files[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Time Synchronized[0m.
+         Stopping [0;1;39mTelephony serv         Stopping [0;1;39mSerial Getty on ttymxc0[0m...
+         Stopping [0;1;39mLSB: Run /etc/rc.local if it exist[0m...
+[[0;32m  OK  [0m] Stopped target [0;1;39mHost and Network Name Lookups[0m.
+         Stopping [0;1;39mNetwork Time Service[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mLogin Service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mPeriodic Command Scheduler[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mSerial Getty on ttymxc0[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mGetty on tty1[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mBluetooth service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mKernel Logging Service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mTelephony service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39msms service to receive the sms messages[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLSB: Run /etc/rc.local if it exist[0m.
+         Stopping [0;1;39mdhcp-server.service[0m...
+         Stopping [0;1;39mSystem Logging Service[0m...
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-getty.slice[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-serial\x2dgetty.slice[0m.
+         Stopping [0;1;39m/etc/rc.local Compatibility[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mSystem Logging Service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mdhcp-server.service[0m.
+         Stopping [0;1;39mrng-tools.service[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mHardware RNG Entropy Gatherer Daemon[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mrng-tools.service[0m.
+[[0m[0;31m*     [0m] A stop job is running for /etc/rc.local Compatibility (7s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for /etc/rc.local Compatibility (8s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for /etc/rc.local Compatibility (8s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for /etc/rc.local Compatibility (9s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for /etc/rc.local Compatibility (9s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for /etc/rc.local Compatibility (10s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] A stop job is running for /etc/rc.local Compatibility (10s / no limit)
+M[K[     [0;31m*[0m] A stop job is running for /etc/rc.local Compatibility (11s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] A stop job is running for /etc/rc.local Compatibility (11s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for /etc/rc.local Compatibility (12s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for /etc/rc.local Compatibility (12s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for /etc/rc.local Compatibility (13s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for /etc/rc.local Compatibility (13s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for /etc/rc.local Compatibility (14s / no limit)
+M[K[[0m[0;31m*     [0m] A stop job is running for /etc/rc.local Compatibility (14s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for /etc/rc.local Compatibility (15s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for /etc/rc.local Compatibility (15s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for /etc/rc.local Compatibility (16s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for /etc/rc.local Compatibility (16s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for /etc/rc.local Compatibility (17s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] A stop job is running for /etc/rc.local Compatibility (17s / no limit)
+M[K[     [0;31m*[0m] A stop job is running for /etc/rc.local Compatibility (18s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] A stop job is running for /etc/rc.local Compatibility (18s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for /etc/rc.local Compatibility (19s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for /etc/rc.local Compatibility (19s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for /etc/rc.local Compatibility (20s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for /etc/rc.local Compatibility (20s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for /etc/rc.local Compatibility (21s / no limit)
+M[K[[0m[0;31m*     [0m] A stop job is running for /etc/rc.local Compatibility (21s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for /etc/rc.local Compatibility (22s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for /etc/rc.local Compatibility (22s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for /etc/rc.local Compatibility (23s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for /etc/rc.local Compatibility (23s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for /etc/rc.local Compatibility (24s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] A stop job is running for /etc/rc.local Compatibility (24s / no limit)
+M[K[     [0;31m*[0m] A stop job is running for /etc/rc.local Compatibility (25s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] A stop job is running for /etc/rc.local Compatibility (25s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for /etc/rc.local Compatibility (26s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for /etc/rc.local Compatibility (26s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for /etc/rc.local Compatibility (27s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for /etc/rc.local Compatibility (27s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for /etc/rc.local Compatibility (28s / no limit)
+M[K[[0m[0;31m*     [0m] A stop job is running for /etc/rc.local Compatibility (28s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for /etc/rc.local Compatibility (29s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for /etc/rc.local Compatibility (29s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for /etc/rc.local Compatibility (30s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for /etc/rc.local Compatibility (30s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for /etc/rc.local Compatibility (31s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] A stop job is running for /etc/rc.local Compatibility (31s / no limit)
+M[K[[0;32m  OK  [0m] Stopped [0;1;39m/etc/rc.local Compatibility[0m.
+[K[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
+         Stopping [0;1;39mWPA supplicant[0m...
+         Stopping [0;1;39mNetwork Service[0m...
+         Stopping [0;1;39mConnection service[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mWPA supplicant[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mConnection service[0m.
+         Stopping [0;1;39mD-Bus System Message Bus[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mD-Bus System Message Bus[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mSyslog Socket[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDispatch Password …ts to Console Directory Watch[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Initialization[0m.
+         Stopping [0;1;39mLoad/Save Random Seed[0m...
+         Stopping [0;1;39mNetwork Time Synchronization[0m...
+         Stopping [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad Kernel Modules[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad/Save Random Seed[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems[0m.
+         Unmounting [0;1;39m/var/volatile[0m...
+         Unmounting [0;1;39m/misc[0m...
+         Unmounting [0;1;39mTemporary Directory (/tmp)[0m...
+[[0;32m  OK  [0m] Unmounted [0;1;39m/var/volatile[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mTemporary Directory (/tmp)[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/misc[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mFile System Check on /dev/mmcblk0p2[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mRemount Root and Kernel File Systems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSwap[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mShutdown[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mFinal Step[0m.
+[[0;32m  OK  [0m] Started [0;1;39mReboot[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mReboot[0m.
+watchdog: watchdog0: watchdog did not stop!
+imx2-wdt 20bc000.wdog: Device shutdown: Expect reboot!
+reboot: Restarting system
+
+
+U-Boot 2018.03 (Jan 22 2021 - 21:34:10 +0000)
+
+CPU:   Freescale i.MX6UL rev1.2 at 396 MHz
+Reset cause: POR
+Model: Embedded Planet i.MX6 UltraLite Board (DES0258)
+Board: MX6UL EP0258
+DRAM:  1 GiB
+PMIC: PFUZE3000 DEV_ID=0x31 REV_ID=0x11
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+Loading Environment from MMC... OK
+In:    serial
+Out:   serial
+Err:   serial
+switch to partitions #0, OK
+mmc0(part 0) is current device
+Net:   eth0: ethernet@02188000 [PRIME]
+Fastboot: Normal
+Normal Boot
+Hit any key to stop autoboot:  5  4  3  2  1  0 
+switch to partitions #0, OK
+mmc0(part 0) is current device
+Booting from mmc...
+30191 bytes read in 121 ms (243.2 KiB/s)
+5731560 bytes read in 418 ms (13.1 MiB/s)
+Kernel image @ 0x80800000 [ 0x000000 - 0x5774e8 ]
+## Flattened Device Tree blob at 83000000
+   Booting using the fdt blob at 0x83000000
+   Using Device Tree in place at 83000000, end 8300a5ee
+ft_system_setup for mx6
+switch to ldo_bypass mode!
+
+Starting kernel ...
+
+/cpus/cpu@0 missing clock-frequency property
+cpu: bypassed regulator has no supply!
+cpu: failed to get the current voltage(-517)
+anatop_regulator 20c8000.anatop:regulator-vddcore: failed to register cpu
+vddsoc: bypassed regulator has no supply!
+vddsoc: failed to get the current voltage(-517)
+anatop_regulator 20c8000.anatop:regulator-vddsoc: failed to register vddsoc
+spi_imx 2008000.ecspi: dma setup error -19, use pio
+spi_imx 200c000.ecspi: dma setup error -19, use pio
+spi_imx 2014000.ecspi: dma setup error -19, use pio
+fxos 8700 read chip ID 0x0 is not equal to 0xc7 or 0xc4
+mmc0: mmc_select_hs200 failed, error -74
+
+Welcome to [1mPoky (Yocto Project Reference Distro) 2.7.2 (warrior)[0m!
+
+[[0;32m  OK  [0m] Listening on [0;1;39mudev Control Socket[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mRemote File Systems[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket[0m.
+         Mounting [0;1;39mKernel Debug File System[0m...
+         Starting [0;1;39mLoad Kernel Modules[0m...
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-getty.slice[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mNetwork Service Netlink Socket[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
+         Mounting [0;1;39mTemporary Directory (/tmp)[0m...
+[[0;32m  OK  [0m] Started [0;1;39mHardware RNG Entropy Gatherer Daemon[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mSyslog Socket[0m.
+         Starting [0;1;39mRemount Root and Kernel File Systems[0m...
+[[0;32m  OK  [0m] Listening on [0;1;39minitctl Compatibility Named Pipe[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mudev Kernel Socket[0m.
+         Starting [0;1;39mudev Coldplug all Devices[0m...
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket (/dev/log)[0m.
+         Starting [0;1;39mJournal Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+         Starting [0;1;39mCreate list of re…odes for the current kernel[0m...
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-serial\x2dgetty.slice[0m.
+[[0;32m  OK  [0m] Created slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDispatch Password …ts to Console Directory Watch[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39mKernel Debug File System[0m.
+[[0;32m  OK  [0m] Started [0;1;39mLoad Kernel Modules[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39mTemporary Directory (/tmp)[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRemount Root and Kernel File Systems[0m.
+[[0;32m  OK  [0m] Started [0;1;39mCreate list of req… nodes for the current kernel[0m.
+         Starting [0;1;39mCreate Static Device Nodes in /dev[0m...
+         Mounting [0;1;39mFUSE Control File System[0m...
+         Starting [0;1;39mApply Kernel Variables[0m...
+         Mounting [0;1;39mNFSD configuration filesystem[0m...
+[[0;32m  OK  [0m] Mounted [0;1;39mFUSE Control File System[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39mNFSD configuration filesystem[0m.
+[[0;32m  OK  [0m] Started [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Started [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Started [0;1;39mJournal Service[0m.
+         Starting [0;1;39mFlush Journal to Persistent Storage[0m...
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mContainers[0m.
+         Mounting [0;1;39m/var/volatile[0m...
+         Starting [0;1;39mudev Kernel Device Manager[0m...
+[[0;32m  OK  [0m] Mounted [0;1;39m/var/volatile[0m.
+[[0;32m  OK  [0m] Started [0;1;39mFlush Journal to Persistent Storage[0m.
+[[0;32m  OK  [0m] Started [0;1;39mudev Kernel Device Manager[0m.
+         Starting [0;1;39mNetwork Service[0m...
+         Starting [0;1;39mLoad/Save Random Seed[0m...
+[[0;32m  OK  [0m] Started [0;1;39mLoad/Save Random Seed[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Service[0m.
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttymxc0[0m.
+[[0;32m  OK  [0m] Started [0;1;39mudev Coldplug all Devices[0m.
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/mmcblk0p2[0m.
+         Starting [0;1;39mFile System Check on /dev/mmcblk0p2[0m...
+[[0;32m  OK  [0m] Started [0;1;39mFile System Check on /dev/mmcblk0p2[0m.
+         Mounting [0;1;39m/misc[0m...
+[[0;32m  OK  [0m] Mounted [0;1;39m/misc[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.
+         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+[[0;32m  OK  [0m] Started [0;1;39mCreate Volatile Files and Directories[0m.
+         Starting [0;1;39mNetwork Time Synchronization[0m...
+         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Started [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mRPCbind Server Activation Socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
+         Starting [0;1;39mSystem Logging Service[0m...
+         Starting [0;1;39m1-wire filesystem FUSE mount[0m...
+         Starting [0;1;39mrng-tools.service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mPeriodic Command Scheduler[0m.
+[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+         Starting [0;1;39mConnection service[0m...
+         Starting [0;1;39mLogin Service[0m...
+         Starting [0;1;39mRPC Bind Service[0m...
+         Starting [0;1;39mTelephony service[0m...
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily rotation of log files[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mTimers[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mrng-tools.service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRPC Bind Service[0m.
+         Starting [0;1;39mdhcp-server.service[0m...
+         Starting [0;1;39mLSB: Starts conntrackd[0m...
+         Starting [0;1;39mKernel Logging Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mLogin Service[0m.
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mLSB: Starts conntrackd[0m.
+See 'systemctl status conntrackd.service' for details.
+[[0;32m  OK  [0m] Started [0;1;39mTelephony service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mConnection service[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+         Starting [0;1;39m/etc/rc.local Compatibility[0m...
+[[0;32m  OK  [0m] Started [0;1;39mNFS status monitor for NFSv2/3 locking.[0m.
+         Starting [0;1;39mNetwork Time Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39msms service to receive the sms messages[0m.
+[[0;32m  OK  [0m] Started [0;1;39m/etc/rc.local Compatibility[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSerial Getty on ttymxc0[0m.
+[[0;32m  OK  [0m] Started [0;1;39mGetty on tty1[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLogin Prompts[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mdhcp-server.service[0m.
+         Stopping [0;1;39mTelephony service[0m...
+         Stopping [0;1;39mNFS status monitor for NFSv2/3 locking.[0m...
+         Starting [0;1;39mHostname Service[0m...
+         Starting [0;1;39mWPA supplicant[0m...
+         Starting [0;1;39mLSB: Run /etc/rc.local if it exist[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mTelephony service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNFS status monitor for NFSv2/3 locking.[0m.
+[[0;32m  OK  [0m] Started [0;1;39mLSB: Run /etc/rc.local if it exist[0m.
+[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
+[[0;32m  OK  [0m] Started [0;1;39mHostname Service[0m.
+         Starting [0;1;39mBluetooth service[0m...
+         Stopping [0;1;39mRPC Bind Service[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mRPC Bind Service[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mRPCbind Server Activation Socket[0m.
+[[0;1;31mFAILED[0m] Failed to start [0;1;39m1-wire filesystem FUSE mount[0m.
+See 'systemctl status owfs.service' for details.
+[[0;32m  OK  [0m] Started [0;1;39mKernel Logging Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mBluetooth service[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mMulti-User System[0m.
+         Starting [0;1;39mUpdate UTMP about System Runlevel Changes[0m...
+[[0;32m  OK  [0m] Reached target [0;1;39mBluetooth[0m.
+
+Poky (Yocto Project Reference Distro) 2.7.2 CellConcentrator-0010ec022247 ttymxc0
+
+CellConcentrator-0010ec022247 login: 

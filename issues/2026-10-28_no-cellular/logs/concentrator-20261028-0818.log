@@ -1,0 +1,227 @@
+stty -echo 2>/dev/null; cat /var/log/concentrator.log; echo __GW_''DONE__
+Wed Oct 28 08:17:13 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:17:13 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:17:13 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:17:22 2026 - *      Info *: SW Reseting... Type=34
+Wed Oct 28 08:17:22 2026 - *      Info *: Read Update config file for General Settings.
+Wed Oct 28 08:17:22 2026 - *      Info *: Config file '/etc/concentrator/concentrator.conf' update SAVED.
+Wed Oct 28 08:17:52 2026 - *     Error *: g_DustConnectionTaskRunning 30 seconds after app wants to terminate
+Wed Oct 28 08:17:52 2026 - *     Error *: g_connmanTaskRunning 30 seconds after app wants to terminate
+Wed Oct 28 08:17:52 2026 - *      Info *: Exited main task loop.
+Wed Oct 28 08:17:52 2026 - *      Info *: Cleaning up fifo temp files in /tmp/
+Wed Oct 28 08:17:52 2026 - *      Info *: Concentrator Exiting!
+Wed Oct 28 08:19:48 2026 - *      Info *: 
+Wed Oct 28 08:19:48 2026 - *      Info *: 
+Wed Oct 28 08:19:48 2026 - *      Info *: 
+Wed Oct 28 08:19:48 2026 - *      Info *: 
+Wed Oct 28 08:19:48 2026 - *      Info *: 
+Wed Oct 28 08:19:48 2026 - *      Info *: Concentrator Booting!
+Wed Oct 28 08:19:48 2026 - *      Info *: V 1.01.07
+Wed Oct 28 08:19:48 2026 - *      Info *: Build 05.
+Wed Oct 28 08:19:48 2026 - *      Info *: Running program: /usr/bin/Concentrator
+Wed Oct 28 08:19:48 2026 - *      Info *: No Extra Command Line Argument Passed Other Than Program Name
+Wed Oct 28 08:19:48 2026 - *      Info *: Read check config file for Mote Common Settings.
+Wed Oct 28 08:19:48 2026 - *      Info *: Config file '/etc/concentrator/concentrator.conf' update SAVED.
+Wed Oct 28 08:19:48 2026 - *      Info *: dust_manager serial port name: /dev/ttymxc2
+Wed Oct 28 08:19:48 2026 - *      Info *: Running with NO DISPLAY!!!!.
+Wed Oct 28 08:19:48 2026 - *      Info *: Creating Diag IN FIFO !
+Wed Oct 28 08:19:48 2026 - *      Info *: Powering down dust module...
+Wed Oct 28 08:19:48 2026 - *      Info *: Getting messages from ACS
+Wed Oct 28 08:19:48 2026 - *      Info *: Waiting for g_xLCDSyncSemaphore from lcdStartupTask.
+Wed Oct 28 08:19:48 2026 - *      Info *: Got g_xLCDSyncSemaphore from lcdStartupTask.
+Wed Oct 28 08:19:48 2026 - *      Info *: Displaying Error 34
+Wed Oct 28 08:19:48 2026 - *      Info *: SMS task - started
+Wed Oct 28 08:19:48 2026 - *     Error *: Error opening FIFO  Errno=2 , /tmp/ConcCLI_OUT
+Wed Oct 28 08:19:48 2026 - *      Info *: ACS IP:70.164.25.45
+Wed Oct 28 08:19:49 2026 - *      Info *: 
+Wed Oct 28 08:19:49 2026 - *      Info *: 
+Wed Oct 28 08:19:49 2026 - *      Info *: 
+Wed Oct 28 08:19:49 2026 - *      Info *: 
+Wed Oct 28 08:19:49 2026 - *      Info *: 
+Wed Oct 28 08:19:49 2026 - *      Info *: Concentrator Booting!
+Wed Oct 28 08:19:49 2026 - *      Info *: V 1.01.07
+Wed Oct 28 08:19:49 2026 - *      Info *: Build 05.
+Wed Oct 28 08:19:49 2026 - *      Info *: Running program: /usr/bin/Concentrator
+Wed Oct 28 08:19:49 2026 - *      Info *: No Extra Command Line Argument Passed Other Than Program Name
+Wed Oct 28 08:19:49 2026 - *      Info *: Read check config file for Mote Common Settings.
+Wed Oct 28 08:19:49 2026 - *      Info *: Config file '/etc/concentrator/concentrator.conf' update SAVED.
+Wed Oct 28 08:19:49 2026 - *      Info *: dust_manager serial port name: /dev/ttymxc2
+Wed Oct 28 08:19:49 2026 - *      Info *: Running with NO DISPLAY!!!!.
+Wed Oct 28 08:19:49 2026 - *      Info *: Powering down dust module...
+Wed Oct 28 08:19:49 2026 - *      Info *: Creating Diag IN FIFO !
+Wed Oct 28 08:19:49 2026 - *     Error *: Error opening FIFO  Errno=2 , /tmp/ConcCLI_OUT
+Wed Oct 28 08:19:49 2026 - *      Info *: Getting messages from ACS
+Wed Oct 28 08:19:49 2026 - *      Info *: Waiting for g_xLCDSyncSemaphore from lcdStartupTask.
+Wed Oct 28 08:19:49 2026 - *      Info *: Got g_xLCDSyncSemaphore from lcdStartupTask.
+Wed Oct 28 08:19:49 2026 - *      Info *: Displaying Error 34
+Wed Oct 28 08:19:49 2026 - *      Info *: SMS task - started
+Wed Oct 28 08:19:49 2026 - *      Info *: ACS IP:70.164.25.45
+Wed Oct 28 08:19:50 2026 - *      Info *: 
+Wed Oct 28 08:19:50 2026 - *      Info *: 
+Wed Oct 28 08:19:50 2026 - *      Info *: 
+Wed Oct 28 08:19:50 2026 - *      Info *: 
+Wed Oct 28 08:19:50 2026 - *      Info *: 
+Wed Oct 28 08:19:50 2026 - *      Info *: Concentrator Booting!
+Wed Oct 28 08:19:50 2026 - *      Info *: V 1.01.07
+Wed Oct 28 08:19:50 2026 - *      Info *: Build 05.
+Wed Oct 28 08:19:50 2026 - *      Info *: Running program: /usr/bin/Concentrator
+Wed Oct 28 08:19:50 2026 - *      Info *: No Extra Command Line Argument Passed Other Than Program Name
+Wed Oct 28 08:19:50 2026 - *      Info *: Read check config file for Mote Common Settings.
+Wed Oct 28 08:19:50 2026 - *      Info *: Config file '/etc/concentrator/concentrator.conf' update SAVED.
+Wed Oct 28 08:19:50 2026 - *      Info *: dust_manager serial port name: /dev/ttymxc2
+Wed Oct 28 08:19:50 2026 - *      Info *: Running with NO DISPLAY!!!!.
+Wed Oct 28 08:19:50 2026 - *      Info *: Creating Diag IN FIFO !
+Wed Oct 28 08:19:50 2026 - *     Error *: Error opening FIFO  Errno=2 , /tmp/ConcCLI_OUT
+Wed Oct 28 08:19:50 2026 - *      Info *: Powering down dust module...
+Wed Oct 28 08:19:50 2026 - *      Info *: Getting messages from ACS
+Wed Oct 28 08:19:50 2026 - *      Info *: Waiting for g_xLCDSyncSemaphore from lcdStartupTask.
+Wed Oct 28 08:19:50 2026 - *      Info *: Got g_xLCDSyncSemaphore from lcdStartupTask.
+Wed Oct 28 08:19:50 2026 - *      Info *: Displaying Error 34
+Wed Oct 28 08:19:50 2026 - *      Info *: SMS task - started
+Wed Oct 28 08:19:50 2026 - *      Info *: Service camwifi Strength=62
+Wed Oct 28 08:19:50 2026 - *      Info *: Service EECamTest Strength=77
+Wed Oct 28 08:19:50 2026 - *      Info *: Service AirLiquide-Corporate Strength=73
+Wed Oct 28 08:19:50 2026 - *      Info *: Service AirLiquide-Guest Strength=73
+Wed Oct 28 08:19:50 2026 - *      Info *: Service AirLiquide-Public Strength=73
+Wed Oct 28 08:19:50 2026 - *      Info *: Service VS4820-896 Strength=71
+Wed Oct 28 08:19:50 2026 - *      Info *: Service cammifi Strength=65
+Wed Oct 28 08:19:50 2026 - *      Info *: Service IoT Strength=64
+Wed Oct 28 08:19:50 2026 - *      Info *: Service RD-WPA Strength=64
+Wed Oct 28 08:19:50 2026 - *      Info *: Service RD-Employee Strength=63
+Wed Oct 28 08:19:50 2026 - *      Info *: Service penne Strength=55
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.ConnectionStatus = ST_CONNECTED (IP=127.0.0.1)
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.EthernetState = ST_NOT_AVAILABLE
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.WifiState = ST_NOT_AVAILABLE
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.CellularState = ST_NOT_AVAILABLE
+Wed Oct 28 08:19:51 2026 - *      Info *: 		 IP Addr for active IF wlan1=192.168.201.80 
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.ConnectionStatus = ST_CONNECTED (IP=192.168.201.80)
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.EthernetState = ST_NOT_AVAILABLE
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.WifiState = ST_CONNECTED
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.CellularState = ST_NOT_AVAILABLE
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.ConnectionStatus = ST_CONNECTED (IP=192.168.201.80)
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.EthernetState = ST_IDLE
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.WifiState = ST_CONNECTED
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.CellularState = ST_NOT_AVAILABLE
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.ConnectionStatus = ST_CONNECTED (IP=192.168.201.80)
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.EthernetState = ST_IDLE
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.WifiState = ST_CONNECTED
+Wed Oct 28 08:19:51 2026 - *      Info *: ConnmanStatus.CellularState = ST_NOT_AVAILABLE
+Wed Oct 28 08:19:51 2026 - *      Info *: Entering connmanTask runloop ...
+Wed Oct 28 08:19:52 2026 - *      Info *: Powering up dust module...
+Wed Oct 28 08:19:52 2026 - *      Info *: ACS IP:70.164.25.45
+Wed Oct 28 08:19:52 2026 - *      Info *: Stopping Rollback Service
+Wed Oct 28 08:19:52 2026 - *      Info *: No (more) messages from ACS
+Wed Oct 28 08:19:55 2026 - *      Info *: Read Update config file for General Settings.
+Wed Oct 28 08:19:55 2026 - *      Info *: Config file '/etc/concentrator/concentrator.conf' update SAVED.
+Wed Oct 28 08:20:02 2026 - *      Info *: Opening /dev/ttymxc2
+Wed Oct 28 08:20:02 2026 - *      Info *: Initialize IPMG...
+Wed Oct 28 08:20:02 2026 - *      Info *: Init Done!
+Wed Oct 28 08:20:02 2026 - *      Info *: comm_DataTransferTask started!
+Wed Oct 28 08:20:02 2026 - *      Info *: Initiate Connect...
+Wed Oct 28 08:20:02 2026 - *    Notice *: dn_ipmg_status_cb() Dust Connection going from 0 to new status = 1
+Wed Oct 28 08:20:02 2026 - *    Notice *: DN_SERIAL_ST_HELLO_SENT
+Wed Oct 28 08:20:02 2026 - *    Notice *: Waiting for HelloResponse
+Wed Oct 28 08:20:02 2026 - *    Notice *: dn_ipmg_status_cb() Dust Connection going from 1 to new status = 2
+Wed Oct 28 08:20:02 2026 - *    Notice *: DN_SERIAL_ST_CONNECTED
+Wed Oct 28 08:20:02 2026 - *      Info *: Subscribing...
+Wed Oct 28 08:20:02 2026 - *      Info *: Sending subscribe
+Wed Oct 28 08:20:02 2026 - *      Info *: DustStatus = DN_SERIAL_CONNECTED_and_Subscribed
+Wed Oct 28 08:20:02 2026 - *      Info *: Subscribe successful. Listening for incoming data...
+Wed Oct 28 08:20:02 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:20:02 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:20:02 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:20:02 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:20:03 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:20:03 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:20:03 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:20:03 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:20:03 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:20:03 2026 - *      Info *: Smartmesh API - GetNetworkConfig()
+Wed Oct 28 08:20:03 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:20:03 2026 - *      Info *: 	 GET NETWORK CONFIG
+Wed Oct 28 08:20:03 2026 - *      Info *: 	 CONCENTRATOR POWER UP
+Wed Oct 28 08:20:03 2026 - *      Info *: 	 MAC ADDR  = 00:10:EC:02:22:47
+Wed Oct 28 08:20:04 2026 - *      Info *: Smartmesh API - GetSystemInfo()
+Wed Oct 28 08:20:04 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:20:04 2026 - *      Info *: 	 GET SYSTEM INFO
+Wed Oct 28 08:20:08 2026 - *      Info *: SMS task - waiting for sem
+Wed Oct 28 08:20:08 2026 - *      Info *: SMS task - Socket 15 opened
+Wed Oct 28 08:20:08 2026 - *      Info *: SMS task - socket binded
+Wed Oct 28 08:20:08 2026 - *      Info *: SMS task - socket listening
+Wed Oct 28 08:20:21 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:20:21 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:20:21 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:20:33 2026 - *      Info *: 	 REMOTE POWER UP
+Wed Oct 28 08:20:33 2026 - *      Info *: 		 Mote Type     = Pressure Mote
+Wed Oct 28 08:20:33 2026 - *      Info *: 	 MAC ADDR    = 00:17:0D:00:00:70:D9:E6
+Wed Oct 28 08:20:33 2026 - *      Info *: 	 PROTOCOL VER	= 204
+Wed Oct 28 08:20:33 2026 - *      Info *: 	ACK powerup.
+Wed Oct 28 08:20:33 2026 - *      Info *: 	Sending Data to manager, macAddress = 00:17:0D:00:00:70:D9:E6
+Wed Oct 28 08:20:33 2026 - *      Info *: 
+Wed Oct 28 08:20:35 2026 - *      Info *: ACK slot [1] callbackId= 0x1 injRC=-1!
+Wed Oct 28 08:20:38 2026 - *      Info *: 	 SENSOR READING
+Wed Oct 28 08:20:38 2026 - *      Info *: 	 MAC ADDR    = 00:17:0D:00:00:70:D9:E6
+Wed Oct 28 08:20:38 2026 - *      Info *: 
+Wed Oct 28 08:20:38 2026 - *      Info *: 		 Pressure Mote
+Wed Oct 28 08:20:38 2026 - *      Info *: 		 temperature="19.71"[C]
+Wed Oct 28 08:20:38 2026 - *      Info *: 		 battery_voltage="3.39"[V]
+Wed Oct 28 08:20:38 2026 - *      Info *: 		 pressure="0"[lcd_unit]
+Wed Oct 28 08:20:38 2026 - *      Info *: 		 lcd_unit="psi"
+Wed Oct 28 08:20:38 2026 - *      Info *: 		 conv_a0="0.000000e+00"
+Wed Oct 28 08:20:38 2026 - *      Info *: 		 conv_a1="1.000000e+00"
+Wed Oct 28 08:20:38 2026 - *      Info *: 		 ProtoVer="204"
+Wed Oct 28 08:20:38 2026 - *      Info *: Reading PUSHED TO ACS!
+Wed Oct 28 08:20:38 2026 - *      Info *: 	ACK reading.
+Wed Oct 28 08:20:38 2026 - *      Info *: 	Sending Data to manager, macAddress = 00:17:0D:00:00:70:D9:E6
+Wed Oct 28 08:20:38 2026 - *      Info *: 
+Wed Oct 28 08:20:38 2026 - *      Info *: ACK slot [2] callbackId= 0x2 injRC=-1!
+Wed Oct 28 08:20:52 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:20:52 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:20:52 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:21:23 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:21:23 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:21:23 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:21:54 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:21:54 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:21:54 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:22:25 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:22:25 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:22:25 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:22:56 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:22:56 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:22:56 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:23:27 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:23:27 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:23:27 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:23:58 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:23:58 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:23:58 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:24:29 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:24:29 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:24:29 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:25:00 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:25:00 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:25:00 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:25:31 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:25:31 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:25:31 2026 - *      Info *: 	 GET NETWORK INFO
+Wed Oct 28 08:25:36 2026 - *      Info *: 	 SENSOR READING
+Wed Oct 28 08:25:36 2026 - *      Info *: 	 MAC ADDR    = 00:17:0D:00:00:70:D9:E6
+Wed Oct 28 08:25:36 2026 - *      Info *: 
+Wed Oct 28 08:25:36 2026 - *      Info *: 		 Pressure Mote
+Wed Oct 28 08:25:36 2026 - *      Info *: 		 temperature="19.71"[C]
+Wed Oct 28 08:25:36 2026 - *      Info *: 		 battery_voltage="3.50"[V]
+Wed Oct 28 08:25:36 2026 - *      Info *: 		 pressure="0"[lcd_unit]
+Wed Oct 28 08:25:36 2026 - *      Info *: 		 lcd_unit="psi"
+Wed Oct 28 08:25:36 2026 - *      Info *: 		 conv_a0="0.000000e+00"
+Wed Oct 28 08:25:36 2026 - *      Info *: 		 conv_a1="1.000000e+00"
+Wed Oct 28 08:25:36 2026 - *      Info *: 		 ProtoVer="204"
+Wed Oct 28 08:25:36 2026 - *      Info *: Reading PUSHED TO ACS!
+Wed Oct 28 08:25:36 2026 - *      Info *: 	ACK reading.
+Wed Oct 28 08:25:36 2026 - *      Info *: 	Sending Data to manager, macAddress = 00:17:0D:00:00:70:D9:E6
+Wed Oct 28 08:25:36 2026 - *      Info *: 
+Wed Oct 28 08:25:36 2026 - *      Info *: ACK slot [3] callbackId= 0x3 injRC=-1!
+Wed Oct 28 08:26:02 2026 - *      Info *: Smartmesh API - GetNetworkInfo()
+Wed Oct 28 08:26:02 2026 - *      Info *: RECEIVED API REPLY
+Wed Oct 28 08:26:02 2026 - *      Info *: 	 GET NETWORK INFO
+
